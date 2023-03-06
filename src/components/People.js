@@ -10,6 +10,7 @@ const People = () => {
   })
   return ( 
     <div>
+      <h2>People</h2>
       {status === "loading" ? <div>Loading....</div> : null}
       {status === "error" ? <div>Error fetching data....</div> : null}
       {status === "success" && (
