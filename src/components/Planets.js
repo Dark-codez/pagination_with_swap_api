@@ -22,6 +22,7 @@ const Planes = () => {
             <button onClick={() => {
               {data.next && setPage(old => old + 1)}
             }}>Next Page</button>
+            <h3>You are on page: {page}</h3
           </nav> 
           <ul className = "species_details">
             {data?.results?.map((value,index) => {
