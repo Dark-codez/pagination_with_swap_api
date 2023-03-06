@@ -14,15 +14,14 @@ const Planes = () => {
       {status === "error" ? <div>Error fetching data....</div> : null}
       {status === "success" && (
         <>
-           <h2>Planets</h2>
+          <h2>Species</h2>
           <nav>
             <button onClick={() => {
               setPage(old => Math.max(1,old - 1));
             }}>Previous Page</button>
             <button onClick={() => {
-              {data.next && setPage(old => old + 1)}
+              {data.next !== null ? setPage(old => old + 1) : alert("No more content to view")}
             }}>Next Page</button>
-            <h3 style = {{paddingTop: "10px"}}> You are on page: {page} </h3>
           </nav> 
           <ul className = "species_details">
             {data?.results?.map((value,index) => {
