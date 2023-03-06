@@ -6,8 +6,7 @@ const People = () => {
   const [page,setPage] = useState(1);
   const {data, status, error} = useQuery({
     queryKey: ["people",page],
-    queryFn: get_person,
-    keepPreviousData: true
+    queryFn: get_person
   })
   return ( 
     <div>
