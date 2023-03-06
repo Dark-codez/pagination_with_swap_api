@@ -6,8 +6,7 @@ const Planes = () => {
   const [page,setPage] = useState(1);
   const {data, status, error} = useQuery({
     queryKey: ["species",page],
-    queryFn: get_species,
-    keepPreviousData: true
+    queryFn: get_species
   })
   return ( 
     <div>
